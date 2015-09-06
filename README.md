@@ -21,3 +21,15 @@ Broken out:
 Notably, parentheses are not supported; precedence rules are
 implicit and as expected. Namely, all multiplications are
 performed before any additions.
+
+`sumup.go` contains a basic REPL but all of the fun stuff
+is under `parse`. Expressions are interpreted in three
+steps. Lexing (`parse/lex.go`) transforms the raw input
+into symbols then parsing (`parse/parse.go`) builds and
+executes (although the latter should probably be
+pulled out separately) the abstract syntax tree.
+
+The general design and some of the utility functions for
+text processing are modeled closely after the Go
+`text/template`
+[package](http://golang.org/src/text/template/).
