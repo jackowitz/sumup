@@ -17,3 +17,7 @@ Broken out:
 )*       - all repeated zero or more times
 [ \t]*   - optional trailing whitespace
 ```
+
+Notably, parentheses are not supported; precedence rules are
+implicit and as expected. Namely, all multiplications are
+performed before any additions.
